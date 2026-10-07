@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI-Supported Formative Feedback for Campidanese Sardinian Writing</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="page-header">
+    <div class="header-inner">
+      <h1 data-i18n="title"></h1>
+      <p class="authors" data-i18n="authors"></p>
+      <p class="affiliation" data-i18n="affiliation"></p>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="card editor-card" aria-labelledby="editor-title">
+      <div class="card-header">
+        <h2 id="editor-title" data-i18n="editor_title"></h2>
+        <span id="status" class="status" role="status"></span>
+      </div>
+
+      <div class="editor">
+        <div id="backdrop" class="backdrop" aria-hidden="true"></div>
+        <textarea id="text" spellcheck="false" autocomplete="off" autocapitalize="off"></textarea>
+      </div>
+
+      <div class="toolbar">
+        <button id="example" type="button" class="button" data-i18n="example_button"></button>
+        <button id="clear" type="button" class="button" data-i18n="clear_button"></button>
+        <label class="threshold" for="threshold">
+          <span><span data-i18n="threshold_label"></span>: <output id="threshold-value"></output></span>
+          <input id="threshold" type="range" min="0.5" max="0.99" step="0.01">
+        </label>
+      </div>
+      <p class="hint" data-i18n="threshold_hint"></p>
+
+      <h3 data-i18n="legend_title"></h3>
+      <ul id="legend" class="legend"></ul>
+    </section>
+
+    <aside class="card summary-card" aria-labelledby="summary-title">
+      <h2 id="summary-title" data-i18n="summary_title"></h2>
+
+      <dl class="counters">
+        <div><dt data-i18n="summary_words"></dt><dd id="count-words">0</dd></div>
+        <div><dt data-i18n="summary_flagged"></dt><dd id="count-flagged">0</dd></div>
+        <div><dt data-i18n="summary_accepted"></dt><dd id="count-accepted">0</dd></div>
+        <div><dt data-i18n="summary_kept"></dt><dd id="count-kept">0</dd></div>
+      </dl>
+
+      <h3 data-i18n="summary_by_category"></h3>
+      <ul id="by-category" class="bars"></ul>
+
+      <h3 data-i18n="summary_patterns"></h3>
+      <ul id="patterns" class="plain-list"></ul>
+
+      <h3 data-i18n="summary_open"></h3>
+      <ul id="open-issues" class="issue-list"></ul>
+
+      <button id="finish" type="button" class="button primary" data-i18n="finish_button"></button>
+    </aside>
+  </main>
+
+  <div id="popover" class="popover" role="dialog" aria-live="polite" hidden></div>
+
+  <dialog id="final" class="final">
+    <h2 data-i18n="final_title"></h2>
+    <div id="final-body"></div>
+    <p id="final-saved" class="hint"></p>
+    <div class="dialog-actions">
+      <button id="final-continue" type="button" class="button" data-i18n="final_continue"></button>
+      <button id="final-new" type="button" class="button primary" data-i18n="final_new"></button>
+    </div>
+  </dialog>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

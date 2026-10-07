@@ -1,0 +1,11 @@
+sessions/
+.venv/
+models/
+__pycache__/
+TODO.md
+
+# Local files that do not belong in the repository
+desktop.ini
+c--Users-*/
+*.doc
+*.docx

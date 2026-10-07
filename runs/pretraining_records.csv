@@ -1,0 +1,2 @@
+Timestamp,Base Model Name,Seed,Max Epochs,Stopped Epoch,Best Epoch,Batch Size,Grad Accumulation,Learning Rate,MLM Probability,Final Train Loss,Best Val Loss,Plot Path
+20261006_125148,bert-base-italian-uncased,42,50,38,34,16,1,2e-05,0.15,1.912,2.0702857971191406,runs/plots/pretrain/pretrain_loss_20261006_125148.png

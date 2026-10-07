@@ -1,0 +1,42 @@
+# ============================================================
+# Sardinian Formative Feedback - Requirements
+# Tested with Python 3.12 on Windows 11, NVIDIA GPU (8 GB VRAM)
+#
+# Setup:
+#   python -m venv .venv
+#   .venv\Scripts\activate        (Linux/macOS: source .venv/bin/activate)
+#   pip install -r requirements.txt
+#
+# NOTE: torch is pinned to the CUDA 12.6 build. For a different
+# CUDA version (or CPU only) change the index URL and the local
+# version tag below; see https://pytorch.org/get-started/locally/
+# ============================================================
+
+--extra-index-url https://download.pytorch.org/whl/cu126
+
+# --- Core ML ---
+torch==2.12.0+cu126
+transformers==4.57.2
+accelerate==1.13.0
+tokenizers==0.22.2
+
+# --- Hybrid pipeline ---
+symspellpy==6.9.0
+jellyfish==1.2.1
+
+# --- Data and preprocessing ---
+datasets==3.6.0
+numpy==2.4.4
+pandas==2.2.3
+scikit-learn==1.8.0
+beautifulsoup4==4.15.0
+requests==2.34.2
+tqdm==4.70.1
+
+# --- Evaluation ---
+jiwer==4.0.0
+matplotlib==3.10.9
+
+# --- Application ---
+fastapi==0.142.2
+uvicorn==0.54.0

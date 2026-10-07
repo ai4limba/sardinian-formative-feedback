@@ -1,0 +1,2 @@
+Timestamp,Base Model Name,Seed,Error Rate,Max Epochs,Stopped Epoch,Best Epoch,Batch Size,Grad Accumulation,Learning Rate,Final Train Loss,Best F0.5 Score,Associated Precision,Associated Recall,Associated F1,Associated Val Loss,Plot Path
+20261006_125700,bert-sardinian-mlm,42,0.15,50,10,6,16,1,5e-05,0.0611,0.8841140313692243,0.8905791299706431,0.8591658084449022,0.8745904861748133,0.1058893352746963,runs/plots/finetune/finetune_20261006_125700.png

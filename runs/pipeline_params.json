@@ -1,0 +1,5 @@
+{
+  "detection_threshold": 0.95,
+  "correction_threshold": -1.0,
+  "max_levenshtein_distance": 1
+}
