@@ -51,7 +51,7 @@ The evaluation uses 160 held-out sentences in which 409 spelling errors were inj
 | Errors flagged with suggestions | 69.2% |
 | Right word first / in the first 3 / in the first 5 suggestions | 56.2% / 64.1% / 66.0% |
 | Agreement between feedback category and type of injected error | 88.5% |
-| Correct words changed by mistake | 5 out of about 3,500 |
+| Correct words flagged | 12 out of 3,080 (5 of them with a suggestion) |
 | Word error rate: corrupted text → after correction | 0.117 → 0.053 |
 
 When an error is flagged, the right word is among the first five suggestions in 95% of cases (270 out of 283).
@@ -158,7 +158,7 @@ python -m unittest discover tests
 
 ## Data and resources
 
-- **Corpus.** 3,170 Campidanese sentences taken from a parallel Sardinian–Italian text, split into 2,709 training lines, 304 validation sentences and 160 test sentences.
+- **Corpus.** 3,170 Campidanese sentences taken from the novel *Po cantu Biddanoa* by Benvenuto Lobina (first published in 1987; Ilisso, 2004), which is written in Sardinian with an Italian translation on the facing page. The sentences are split into 2,709 training lines, 304 validation sentences and 160 test sentences.
 - **Dictionaries.** Standard and non-standard Campidanese lemmas from [sardu.wiki](https://sardu.wiki/) (Acadèmia de su Sardu) and the vocabulary of the training corpus: about 19,000 words in total. Two larger word lists, from [Ditzionariu in línia](https://ditzionariu.nor-web.eu/) and from the Sardinian Wikipedia, are included but not used for suggestions, because they mix all Sardinian varieties.
 - **Graphematic rules.** Derived from the *Repertorio grafematico sperimentale per la certificazione della lingua sarda* (Regione Autònoma de Sardigna, annex to Delib.G.R. n. 18/13 of 10 June 2022), included in this repository.
 - **Base model.** [dbmdz/bert-base-italian-uncased](https://huggingface.co/dbmdz/bert-base-italian-uncased).
